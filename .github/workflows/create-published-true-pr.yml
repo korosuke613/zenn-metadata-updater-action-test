@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: korosuke613/zenn-metadata-updater-action@0b4c9aaf59f94877f66653072af43ce5bf0bbd91
+      - uses: korosuke613/zenn-metadata-updater-action@729d8ebc45e7a79e606a75b3455aebb8081adf36
         with:
           published: true
           force-push: true
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: korosuke613/zenn-metadata-updater-action@0b4c9aaf59f94877f66653072af43ce5bf0bbd91
+      - uses: korosuke613/zenn-metadata-updater-action@729d8ebc45e7a79e606a75b3455aebb8081adf36
         with:
           published: true
           force-push: true
@@ -29,7 +29,7 @@ jobs:
           git -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
               -c user.name='github-actions[bot]' \
               commit -m "hoge"
-      - uses: korosuke613/zenn-metadata-updater-action@0b4c9aaf59f94877f66653072af43ce5bf0bbd91
+      - uses: korosuke613/zenn-metadata-updater-action@729d8ebc45e7a79e606a75b3455aebb8081adf36
         with:
           published: true
           force-push: true
