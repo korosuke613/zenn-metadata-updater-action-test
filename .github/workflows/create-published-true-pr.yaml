@@ -1,0 +1,31 @@
+name: Create published=true pull request
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: korosuke613/zenn-metadata-updater-action@d3f3d8bf0cede6a27b9d7a1e2b3aa686aa1ca905
+        with:
+          published: true
+
+  not-create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: korosuke613/zenn-metadata-updater-action@d3f3d8bf0cede6a27b9d7a1e2b3aa686aa1ca905
+        with:
+          published: true
+          dry-run: true
+      - run: |
+          git add -A
+          git -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              -c user.name='github-actions[bot]' \
+              commit -m "hoge"
+      - uses: korosuke613/zenn-metadata-updater-action@d3f3d8bf0cede6a27b9d7a1e2b3aa686aa1ca905
+        with:
+          published: true

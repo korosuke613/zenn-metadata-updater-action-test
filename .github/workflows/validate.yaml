@@ -1,0 +1,22 @@
+name: Validate
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: korosuke613/zenn-metadata-updater-action@d3f3d8bf0cede6a27b9d7a1e2b3aa686aa1ca905
+        id: action
+        with:
+          validate-only: true
+        continue-on-error: true
+      - if: ${{ steps.action.outcome == 'failure' }}
+        run: echo "Success"
+      - if: ${{ steps.action.outcome == 'success' }}
+        run: |
+          echo "Failure"
+          exit 1
