@@ -17,9 +17,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - uses: korosuke613/zenn-metadata-updater-action@19ec37916c7ff20def217947319d33768b76c3c3
+      - uses: korosuke613/zenn-metadata-updater-action@release-please--branches--main--components--typescript-action
         with:
           published: true
+          auto-generate-published-at: next_business_day_13
 
   not-create-pr:
     runs-on: ubuntu-latest
@@ -27,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - uses: korosuke613/zenn-metadata-updater-action@19ec37916c7ff20def217947319d33768b76c3c3
+      - uses: korosuke613/zenn-metadata-updater-action@release-please--branches--main--components--typescript-action
         with:
           published: true
           dry-run: true
@@ -36,6 +37,6 @@ jobs:
           git -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
               -c user.name='github-actions[bot]' \
               commit -m "hoge"
-      - uses: korosuke613/zenn-metadata-updater-action@19ec37916c7ff20def217947319d33768b76c3c3
+      - uses: korosuke613/zenn-metadata-updater-action@release-please--branches--main--components--typescript-action
         with:
           published: true
