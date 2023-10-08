@@ -4,11 +4,17 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   create-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: korosuke613/zenn-metadata-updater-action@d3f3d8bf0cede6a27b9d7a1e2b3aa686aa1ca905
         with:
           published: true
@@ -17,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: korosuke613/zenn-metadata-updater-action@d3f3d8bf0cede6a27b9d7a1e2b3aa686aa1ca905
         with:
           published: true
