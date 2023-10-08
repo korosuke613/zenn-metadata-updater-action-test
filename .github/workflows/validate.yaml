@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: korosuke613/zenn-metadata-updater-action@ba273bfddd4a5f494881d42c5c706cd3ccd2dbef
+      - uses: korosuke613/zenn-metadata-updater-action@19ec37916c7ff20def217947319d33768b76c3c3
         id: action
         with:
           validate-only: true

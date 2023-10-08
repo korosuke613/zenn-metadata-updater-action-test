@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - uses: korosuke613/zenn-metadata-updater-action@ba273bfddd4a5f494881d42c5c706cd3ccd2dbef
+      - uses: korosuke613/zenn-metadata-updater-action@19ec37916c7ff20def217947319d33768b76c3c3
         with:
           published: true
 
@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - uses: korosuke613/zenn-metadata-updater-action@ba273bfddd4a5f494881d42c5c706cd3ccd2dbef
+      - uses: korosuke613/zenn-metadata-updater-action@19ec37916c7ff20def217947319d33768b76c3c3
         with:
           published: true
           dry-run: true
@@ -36,6 +36,6 @@ jobs:
           git -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
               -c user.name='github-actions[bot]' \
               commit -m "hoge"
-      - uses: korosuke613/zenn-metadata-updater-action@ba273bfddd4a5f494881d42c5c706cd3ccd2dbef
+      - uses: korosuke613/zenn-metadata-updater-action@19ec37916c7ff20def217947319d33768b76c3c3
         with:
           published: true
