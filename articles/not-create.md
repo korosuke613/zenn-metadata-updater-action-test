@@ -4,6 +4,7 @@ emoji: ""
 type: "idea"
 topics: ["ProductivityWeekly", "生産性向上"]
 published: true
+publishedAt: "2023-10-10 13:00"
 ---
 
 こんにちは。サイボウズ株式会社 [生産性向上チーム](https://blog.cybozu.io/entry/2020/08/31/080000)の平木場です。
